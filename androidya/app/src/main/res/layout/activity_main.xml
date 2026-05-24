@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F4F6FA">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="18dp"
+        android:layout_marginTop="45dp"
+        android:gravity="center_horizontal">
+
+        <!-- TITULO -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sistema de Artículos"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:textColor="#1E2A5A"
+            android:gravity="center"
+            android:layout_marginTop="20dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ejercicios 14, 15 y 16 integrados"
+            android:textSize="16sp"
+            android:textColor="#5F6C7B"
+            android:gravity="center"
+            android:layout_marginBottom="24dp" />
+
+        <!-- MENU -->
+
+        <LinearLayout
+            android:id="@+id/menuPrincipal"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:elevation="6dp"
+            android:orientation="vertical"
+            android:padding="22dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:gravity="center"
+                android:text="Menú Principal"
+                android:textColor="#1E2A5A"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#1E88E5"
+                android:onClick="mostrarRegistros"
+                android:text="Registros"
+                android:textColor="#FFFFFF"
+                android:textSize="17sp" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:backgroundTint="#7E57C2"
+                android:onClick="mostrarCreditos"
+                android:text="Créditos"
+                android:textColor="#FFFFFF"
+                android:textSize="17sp" />
+
+        </LinearLayout>
+
+        <!-- REGISTROS -->
+
+        <LinearLayout
+            android:id="@+id/seccionRegistros"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:background="#FFFFFF"
+            android:padding="20dp"
+            android:elevation="6dp"
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Gestión de artículos"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="#1E2A5A"
+                android:gravity="center"
+                android:layout_marginBottom="18dp" />
+
+            <!-- CAMPOS -->
+
+            <EditText
+                android:id="@+id/etCodigo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Código"
+                android:inputType="number"
+                android:textColor="#000000"
+                android:textColorHint="#757575"
+                android:backgroundTint="#1E88E5"/>
+
+            <EditText
+                android:id="@+id/etDescripcion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Descripción"
+                android:textColor="#000000"
+                android:textColorHint="#757575"
+                android:backgroundTint="#1E88E5"/>
+
+            <EditText
+                android:id="@+id/etPrecio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Precio"
+                android:inputType="numberDecimal"
+                android:textColor="#000000"
+                android:textColorHint="#757575"
+                android:backgroundTint="#1E88E5"/>
+
+            <!-- BOTONES SQLITE -->
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Agregar artículo"
+                android:onClick="altaArticulo"
+                android:backgroundTint="#43A047"
+                android:textColor="#FFFFFF"
+                android:layout_marginTop="12dp"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Consultar por código"
+                android:onClick="consultarPorCodigo"
+                android:backgroundTint="#1E88E5"
+                android:textColor="#FFFFFF"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Modificar artículo"
+                android:onClick="modificarArticulo"
+                android:backgroundTint="#FB8C00"
+                android:textColor="#FFFFFF"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Eliminar artículo"
+                android:onClick="bajaArticulo"
+                android:backgroundTint="#E53935"
+                android:textColor="#FFFFFF"/>
+
+            <!-- ARCHIVOS -->
+
+            <EditText
+                android:id="@+id/etNombreArchivo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nombre del archivo externo"
+                android:text="articulos.txt"
+                android:textColor="#000000"
+                android:textColorHint="#757575"
+                android:backgroundTint="#7E57C2"
+                android:layout_marginTop="20dp"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Exportar artículos"
+                android:onClick="exportarArticulos"
+                android:backgroundTint="#3949AB"
+                android:textColor="#FFFFFF"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Importar artículos"
+                android:onClick="importarArticulos"
+                android:backgroundTint="#00897B"
+                android:textColor="#FFFFFF"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ver bitácora"
+                android:onClick="verBitacora"
+                android:backgroundTint="#6D4C41"
+                android:textColor="#FFFFFF"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Volver al menú"
+                android:onClick="volverMenu"
+                android:backgroundTint="#607D8B"
+                android:textColor="#FFFFFF"
+                android:layout_marginTop="14dp"/>
+
+            <!-- RESULTADOS -->
+
+            <EditText
+                android:id="@+id/etResultado"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Resultados / Bitácora"
+                android:minLines="8"
+                android:gravity="top"
+                android:inputType="textMultiLine"
+                android:background="#DCE6F2"
+                android:layout_marginTop="18dp"
+                android:padding="14dp"
+                android:textColor="#000000"
+                android:textColorHint="#757575"/>
+
+        </LinearLayout>
+
+        <!-- CREDITOS -->
+
+        <LinearLayout
+            android:id="@+id/seccionCreditos"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:background="#FFFFFF"
+            android:padding="24dp"
+            android:elevation="6dp"
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Créditos"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:textColor="#1E2A5A"
+                android:gravity="center" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Desarrollado por:"
+                android:textSize="18sp"
+                android:textColor="#5F6C7B"
+                android:gravity="center"
+                android:layout_marginTop="20dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Pamela Arevalo"
+                android:textSize="26sp"
+                android:textStyle="bold"
+                android:textColor="#7E57C2"
+                android:gravity="center"
+                android:layout_marginTop="10dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Aplicación Android que integra SQLite, archivos externos y archivos internos."
+                android:textSize="16sp"
+                android:textColor="#333333"
+                android:gravity="center"
+                android:layout_marginTop="20dp" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Volver al menú"
+                android:onClick="volverMenu"
+                android:backgroundTint="#607D8B"
+                android:textColor="#FFFFFF"
+                android:layout_marginTop="24dp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>
