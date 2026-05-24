@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">ListaConFragmentos</string>
+
+    <string name="item_perro">Perro</string>
+    <string name="item_gato">Gato</string>
+    <string name="item_vaca">Vaca</string>
+
+    <string name="desc_perro">Este es un perrito. El mejor amigo del hombre y hace guau guau.</string>
+    <string name="desc_gato">Este es un gatito. Para ellos tú eres su mascota jaja y hace miau miau.</string>
+    <string name="desc_vaca">Esta es una vaquita. Vive en la granja, come pasto, nos da leche y hace muuuuu.</string>
+</resources>
